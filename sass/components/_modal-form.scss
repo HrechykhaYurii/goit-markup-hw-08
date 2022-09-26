@@ -2,10 +2,14 @@
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5    ;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-font-color);
+
+@media screen and (min-width: 1200px){
+        line-height: 1.15;
+    }
 }
 
 .modal-form {
@@ -114,10 +118,15 @@
 
 .check-field__text {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--secondary-font-color);
+
+@media screen and (min-width: 1200px){
+        font-size: 14px;
+        line-height: 1.7;
+}
 }
 
 .check-field__link {
@@ -131,9 +140,9 @@
 }
 
 .modal-form__submit {
-    padding: 10px 32px;
+    padding: 10px 52px;
     border: 1px solid transparent;
-    min-width: 216px;
+    width: 200px;
     align-self: center;
 
     font-weight: 700;

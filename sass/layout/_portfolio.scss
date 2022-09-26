@@ -1,14 +1,32 @@
 .button-filter {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: start;
+    row-gap: 15px;
     column-gap: 8px;
-    margin-bottom: 50px;
+    width: 90%;
+    margin-bottom: 40px;
+
+
+    @media screen and (min-width: 1200px){
+     margin-left: auto;
+     margin-right: auto;
+     flex-wrap: nowrap;
+    //  justify-content: center;
+     width: 575px;
+     margin-bottom: 50px;  
+    }
+    
 }
 
 .button-filter__item {
     padding: 6px 22px;
     border: 1px solid transparent;
-    min-width: 130px;
+    
+
+    @media screen and (min-width: 1200px){
+      min-width: 130px;
+    }
 
     font-weight: 500;
     font-size: 16px;
@@ -20,6 +38,8 @@
     border-radius: 4px;
     text-align: center;
     letter-spacing: 0.03em;
+
+
 
     transition: color var(--transition-dur-and-funk), background-color var(--transition-dur-and-funk), box-shadow var(--transition-dur-and-funk);
 
@@ -34,19 +54,26 @@
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: calc((100% - 60px) /3);
+    flex-basis: calc((100% - 60px) /2);
     gap: 30px;
+
+@media screen and (min-width: 1200px){
+    flex-basis: calc((100% - 60px) /3);    
+}
 
 }
 
 .portfolio__item {
+    flex-grow: 1;
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: none;
 }
 
 .portfolio__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     transition: box-shadow var(--transition-dur-and-funk);
 
     &:hover,
@@ -85,6 +112,7 @@
 }
 
 .portfolio__title {
+    width: 306px;
     margin-bottom: 4px;
 
     font-weight: 700;

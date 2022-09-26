@@ -24,6 +24,11 @@
                     <li class="nav-menu__item"><a href="#" class="link nav-menu__link">Контакти</a></li>
                 </ul>
             </nav>
+            <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="open-menu-btn__icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-burger"></use>
+                </svg>
+            </button>
             <ul class="list contact-menu">
                 <li class="contact-menu__item">
                     <a href="info@devstudio.com" class="link contact-menu__link">
@@ -346,42 +351,42 @@
             <div class="container">
                 <h2 class="section-title">Постійні клієнти</h2>
                 <ul class="client">
-                    <li>
+                    <li class="client__item">
                         <a href="#" class="client__link">
                         <svg lang="en" aria-label="client icon" class="client__icon" width="106" height="60">
                             <use href="./images/icons.svg#icon-client1"></use>
                         </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="client__item">
                         <a href="#" class="client__link">
                         <svg lang="en" aria-label="client icon" class="client__icon" width="106" height="60">
                             <use href="./images/icons.svg#icon-client2"></use>
                         </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="client__item">
                         <a href="#" class="client__link">
                         <svg lang="en" aria-label="client icon" class="client__icon" width="106" height="60">
                             <use href="./images/icons.svg#icon-client3"></use>
                         </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="client__item">
                         <a href="#" class="client__link">
                         <svg lang="en" aria-label="client icon" class="client__icon" width="106" height="60">
                             <use href="./images/icons.svg#icon-client4"></use>
                         </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="client__item">
                         <a href="#" class="client__link">
                         <svg lang="en" aria-label="client icon" class="client__icon" width="106" height="60">
                             <use href="./images/icons.svg#icon-client5"></use>
                         </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="client__item">
                         <a href="#" class="client__link">
                         <svg lang="en" aria-label="client icon" class="client__icon" width="106" height="60">
                             <use href="./images/icons.svg#icon-client6"></use>
@@ -505,12 +510,41 @@
                     <svg class="check-field__select" width="16" height="15">
                         <use  href="./images/icons.svg#icon-check"></use>
                     </svg>
-                    <span class="check-field__text">Погоджуюся з розсилкою та приймаю&nbsp;</span><a href="#"><span class="check-field__link">Умови договору</span></a>
+                    <span class="check-field__text"><p>Погоджуюся з розсилкою та приймаю&nbsp;</span><a href="#"><span class="check-field__link">Умови договору</span></a></p>
                 </label>
                 <button  type="submit" class="modal-form__submit">Відправити</button>
             </form>
         </div>
     </div>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+            <svg  width="40" height="40">
+                <use href="./images/icons.svg#icon-close-btn"></use>
+            </svg>
+        </button>
+        <nav class="mobile-menu">
+            <ul class="list mobile-menu__list">
+                <li class="mobile-menu__item"><a href="./index.html" class="link mobile-menu__link mobile-menu__link--active">Студія</a></li>
+                <li class="mobile-menu__item"><a href="./portfolio.html" class="link mobile-menu__link">Портфоліо</a></li>
+                <li class="mobile-menu__item"><a href="#" class="link mobile-menu__link">Контакти</a></li>
+            </ul>
+        </nav>
+        <ul class="list mobile-contact">
+            <li class="mobile-contact__item">
+                <a href="tel:+380961111111" class="link mobile-contact__tel">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-contact__item">
+                <a href="mailto:info@devstudio.com" class="link mobile-contact__email">info@devstudio.com</a>
+            </li>
+        </ul>
+        <ul class="list mobile-social">
+            <li class="mobile-social__item"><a href="#" class="link mobile-social__link ">Instagram</a></li>
+            <li class="mobile-social__item"><a href="#" class="link mobile-social__link">Twitter</a></li>
+            <li class="mobile-social__item"><a href="#" class="link mobile-social__link">Facebook</a></li>
+            <li class="mobile-social__item"><a href="#" class="link mobile-social__link">LinkedIn</a></li>
+        </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

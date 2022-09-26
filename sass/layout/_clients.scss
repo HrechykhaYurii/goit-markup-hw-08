@@ -1,9 +1,7 @@
-.client {
+.client__item{
     display: flex;
     justify-content: center;
-    column-gap: 30px;
 }
-
 .client__icon {
     fill: var(--icon-color);
     transition: fill var(--transition-dur-and-funk);
@@ -27,8 +25,45 @@
 
     &:hover,
     &:focus {
-         border-color: var(--hover-color);
+        border-color: var(--hover-color);
     }
 }
+
+@media screen and (min-width: 480px) {
+   .client {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 0; 
+    }
+
+   .client__item{
+        flex-basis: calc((100% - 30px)/2);
+   }
+     
+    .client__link {
+       width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+.client__item {
+        flex-basis: calc((100% - 60px)/3);
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .client {
+    flex-wrap: nowrap;
+    justify-content: center;
+    column-gap: 30px;
+    }
+
+}
+
+
+
+
 
 

@@ -1,26 +1,74 @@
-.page-header {
-    border: 1px solid #ECECEC;
+.page-header{
+  border: 1px solid #ECECEC; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+@media (min-width: 768px) {
     display: flex;
     align-items: center;
-}
-
-.page-header__logo {
-    color: var(--logo-header-color);
+    padding: 0;
+    }
 }
 
 .main-menu {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+@media (min-width: 768px){
+    justify-content: flex-start;
+}
+ 
+}
+
+.page-header__logo {
+    color: var(--logo-header-color);
+}
+.nav-menu__list{
+    display: none;
+}
+
+.contact-menu{
+    display: none;
+}
+
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    transition: fill var(--transition-dur-and-funk);
+    
+    &:hover,
+    &:focus {
+        fill: var(--active-color);
+        }
+
+@media (min-width: 768px){
+        display: none;
+    }
 }
 
 .nav-menu {
+@media (min-width: 768px){
     display: flex;
     align-items: center;
+    }
 }
 
 .nav-menu__list {
+@media (min-width: 768px){
     display: flex;
-    margin-left: 93px;
+    margin-left: 87px;
 
     .link {
         display: block;
@@ -33,12 +81,32 @@
     }
 }
 
-.nav-menu__link,
-.contact-menu__link {
+@media (min-width: 1200px){
+    margin-left: 93px;
+}
+
+}
+
+.nav-menu__link{
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     transition: color var(--transition-dur-and-funk);
+
+}
+.contact-menu__link {
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--secondary-font-color);
+    transition: color var(--transition-dur-and-funk);
+
+@media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.14;
+}
 }
 
 .nav-menu__link {
@@ -68,26 +136,40 @@
 }
 
 .contact-menu {
+@media (min-width: 768px){
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
     margin-left: auto;
+}
 
+@media (min-width: 1200px){
+    flex-direction: row;
+    
     & .contact-menu__item:not(:last-child) {
         margin-right: 30px;
     }
 }
+}
 
 .contact-menu__link {
+@media (min-width: 768px){
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
     color: var(--secondary-font-color);
 
     &:hover,
     &:focus {
     color: var(--hover-color)
     }
+}
+
+@media (min-width: 1200px){
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 }
 
 .contact-menu__icon {
