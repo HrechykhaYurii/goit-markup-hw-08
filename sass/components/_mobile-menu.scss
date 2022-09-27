@@ -1,5 +1,7 @@
 .menu-container {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 0;
     left: 0;
     width: 100vw;
@@ -28,12 +30,19 @@
     letter-spacing: 0.02em;
     
 }
-.mobile-menu__item{
-    &:not(:last-child) {
-        margin-bottom: 32px;
-    }
-   
+.mobile-menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: auto;
 }
+
+// .mobile-menu__item{
+//     &:not(:last-child) {
+//         margin-bottom: 32px;
+//     }
+   
+// }
 
 .mobile-menu__link--active {
     color: var(--active-color);
@@ -41,7 +50,6 @@
 
 .mobile-contact__item{
     &:not(:last-child) {
-        margin-top: 302px;
         margin-bottom: 32px;
     }
 }
@@ -63,7 +71,6 @@
 .mobile-social{
     margin-top: 64px;
     display: flex;
-
 }
 
 .mobile-social__link{
